@@ -1,0 +1,24 @@
+<div class="container">
+
+	<nav class="navigation">
+		<ul>
+			<li [routerLink]="['bulkupload']">Bulk Upload Employee Details</li>
+			<li [routerLink]="['edit']">Create Employee </li>
+
+			<li><label for="empid">Edit Employee</label>
+
+				<form class="di" (submit)="searchandEdit(empid)">
+					<input id="empid" name="empid" type="" placeholder="give empid and press enter" #empid>
+				</form>
+
+				<!-- <button class="ph2" (click)="searchandEdit(empid)">go</button></li> -->
+
+		</ul>
+	</nav>
+
+	<div class="routerOutlet">
+		<router-outlet></router-outlet>
+	</div>
+
+
+</div>

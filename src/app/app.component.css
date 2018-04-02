@@ -1,0 +1,41 @@
+p {
+  font-family: Lato;
+}
+div.container{
+  display:flex;
+  flex-direction:column;
+  height:100vh;
+  justify-content:stretch;
+}
+nav.navigation{
+  padding:10px;
+  margin-bottom: 20px;
+  flex-grow:0;
+}
+div.routerOutlet{
+  flex-grow: 1;
+  padding:10px;
+  /* flex-basis:70%; */
+  /* margin-top:20px; */
+  border-top:1px solid black;
+  background:#3F3F3F;
+  color:white;
+  
+}
+
+/*  */
+
+nav.navigation > ul > li{
+  cursor:pointer;
+  padding:5px;
+}
+
+nav.navigation > ul > li:hover{
+  background: lightcoral;
+}
+
+input{
+  padding:5px;
+  border: 1px solid darkgray;
+}
+
