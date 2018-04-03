@@ -26,6 +26,7 @@ import { MenubarModule } from 'primeng/menubar';
 import { InputTextModule } from 'primeng/inputtext';
 import { MultiSelectModule } from 'primeng/multiselect';
 import { DropdownModule } from 'primeng/dropdown';
+import {CalendarModule} from 'primeng/calendar';
 
 
 
@@ -50,7 +51,8 @@ const firebaseConfig = {
     InputTextModule,
     MultiSelectModule,
     DropdownModule,
-    BrowserAnimationsModule],
+    BrowserAnimationsModule,
+    CalendarModule],
   declarations: [AppComponent, HomeComponent, BulkuploadComponent, PagenotfoundComponent, NeworEditEmployeeComponent, EmpdetailsComponent],
   providers: [DataService],
   bootstrap: [AppComponent]

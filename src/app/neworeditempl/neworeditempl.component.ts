@@ -21,19 +21,29 @@ export class NeworEditEmployeeComponent implements OnInit {
   // ];
 
   designations = [
-    { name: 'New York', code: 'NY' },
-    { name: 'Rome', code: 'RM' },
-    { name: 'London', code: 'LDN' },
-    { name: 'Istanbul', code: 'IST' },
-    { name: 'Paris', code: 'PRS' }
+    { name: 'Associate', code: 'Associate' },
+    { name: 'Team Lead', code: 'Team Lead' },
+    { name: 'Manager', code: 'Manager' },
+    { name: 'DL', code: 'DL' },
+    { name: 'CXO', code: 'CXO' }
   ];
 
 
   selectedDesignation;
+  selectedExperience;
+  startdate;
 
+  experiences = [
+    { name: '< 1', code: '< 1' },
+  ];
 
   constructor(private ar: ActivatedRoute, private dataService: DataService) {
     this.empidFromParent = null;
+    for (let i = 1; i < 16; i++) {
+      this.experiences.push({ name: i.toString(), code: i.toString() });
+    }
+    this.experiences.push({ name: '> 15', code: '> 15' });
+
     this.empdata = null;
   }
 

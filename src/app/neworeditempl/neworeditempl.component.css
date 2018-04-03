@@ -19,11 +19,3 @@ div.fullform{
 
 
 }
-
-.child1,child2{
-    width:270px;
-}
-
-.child1 > div{
-    width:100% !important;
-}

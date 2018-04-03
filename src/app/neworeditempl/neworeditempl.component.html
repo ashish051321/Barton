@@ -25,17 +25,24 @@
         <div style="display:flex; justify-content:space-around; margin-top:25px;">
 
             <p-dropdown [options]="designations" [(ngModel)]="selectedDesignation" placeholder="Designation" optionLabel="name" [showClear]="true"
-                class="child1" [autoWidth]='false'>
+                class="child1">
             </p-dropdown>
+            Designation Selected: {{selectedDesignation?.name}}
             <!-- <p>Selected City: {{selectedCity ? selectedCity.name : 'none'}}</p> -->
+        </div>
 
+        <div style="display:flex; justify-content:space-around; margin-top:25px;">
+            <p-dropdown [options]="experiences" [(ngModel)]="selectedExperience" placeholder="Experience (In yrs)" optionLabel="name"
+                [showClear]="true" class="child1" [style]="{'width':'230px'}">
+            </p-dropdown>
+        </div>
 
-            <span class="ui-float-label child2">
-                <input id="float-input" type="text" size="30" pInputText>
-                <label for="float-input">Full Name</label>
-            </span>
+        <div style="display:flex; justify-content:space-around; margin-top:25px;">
+                <p-calendar [(ngModel)]="startdate" placeholder="Start Date"></p-calendar>
 
         </div>
+
+
 
     </div>
 
