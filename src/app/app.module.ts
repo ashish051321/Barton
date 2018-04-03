@@ -15,6 +15,10 @@ import { AngularFireModule } from 'angularfire2';
 // New imports to update based on AngularFire2 version 4
 import { AngularFireDatabaseModule, AngularFireDatabase } from 'angularfire2/database';
 import { AngularFireAuthModule, AngularFireAuth } from 'angularfire2/auth';
+import { EmpdetailsComponent } from './empdetails/empdetails.component';
+
+//service
+import {DataService} from './services/data.service';
 
 const firebaseConfig = {
   apiKey: "AIzaSyAGnXoUeYiceWVB7FK83bAta7ufU6BL7uI",
@@ -31,7 +35,8 @@ const firebaseConfig = {
   imports: [BrowserModule, FormsModule, AppRoutingModule, AngularFireModule.initializeApp(firebaseConfig),
     AngularFireDatabaseModule,
     AngularFireAuthModule],
-  declarations: [AppComponent, HomeComponent, BulkuploadComponent, PagenotfoundComponent, NeworEditEmployeeComponent],
+  declarations: [AppComponent, HomeComponent, BulkuploadComponent, PagenotfoundComponent, NeworEditEmployeeComponent, EmpdetailsComponent],
+  providers:[DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

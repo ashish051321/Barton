@@ -1,0 +1,28 @@
+table{
+    width: 100%;
+    overflow-x: auto;
+  }
+  table,th,td,tr{
+    border:1px solid black;
+    border-collapse:collapse;
+  }
+  
+  table td, table th{
+    padding:10px;
+    text-align: left;
+  }
+  
+  
+  table th{
+    background-color: #008CDB;
+    color: white;
+    text-align: center;
+    letter-spacing: 2px;
+    font-family: garamond;
+    font-weight: lighter;
+    font-size:1.2em;
+  }
+  
+  table tr:nth-child(even) {
+    background-color: lightseagreen;
+  }

@@ -1,0 +1,40 @@
+<table *ngIf="dataSource|async">
+  <tr>
+    <th *ngFor="let item of tableheaders">
+      <p> {{item}}</p>
+      <p>
+        <input type="text">
+      </p>
+    </th>
+    <th>
+      <p>Actions</p>
+      <p>
+          <input type="text" [disabled]="true">
+        </p>
+  
+    </th>
+
+  </tr>
+
+  <tr *ngFor="let emp of (dataSource|async)">
+    <td>
+      <span>{{emp.empid}}</span>
+    </td>
+    <td>
+      <span>{{emp.fullname}}</span>
+    </td>
+    <td>
+      <span *ngIf="(emp.designation) && (emp.designation != 'null')">{{emp.designation}}</span>
+    </td>
+    <td>
+      <span *ngIf="(emp.designation) && (emp.experience != 'null')">{{emp.experience}}</span>
+    </td>
+    <td>
+      <span *ngIf="(emp.designation) && (emp.projectnames != 'null')">{{emp.projectnames}}</span>
+    </td>
+    <td>
+      <span *ngIf="(emp.designation) && (emp.comp_name != 'null')">{{emp.comp_name}}</span>
+    </td>
+  </tr>
+
+</table>

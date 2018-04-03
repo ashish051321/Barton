@@ -20,7 +20,7 @@ div.routerOutlet{
   border-top:1px solid black;
   background:#3F3F3F;
   color:white;
-  
+  overflow-x:auto;
 }
 
 /*  */
