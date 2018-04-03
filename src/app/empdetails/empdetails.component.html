@@ -3,22 +3,23 @@
     <th *ngFor="let item of tableheaders">
       <p> {{item}}</p>
       <p>
-        <input type="text">
+        <input type="text" pInputText class="headertextfield" />
+
       </p>
     </th>
     <th>
       <p>Actions</p>
       <p>
-          <input type="text" [disabled]="true">
-        </p>
-  
+        <input type="text" pInputText class="headertextfield" disabled />
+      </p>
+
     </th>
 
   </tr>
 
   <tr *ngFor="let emp of (dataSource|async)">
     <td>
-      <span>{{emp.empid}}</span>
+      <span class="empids" [routerLink]="['/edit',emp.empid]">{{emp.empid}}</span>
     </td>
     <td>
       <span>{{emp.fullname}}</span>
@@ -35,6 +36,10 @@
     <td>
       <span *ngIf="(emp.designation) && (emp.comp_name != 'null')">{{emp.comp_name}}</span>
     </td>
+    <td>
+      <span></span>
+    </td>
+
   </tr>
 
 </table>

@@ -1,21 +1,10 @@
 <div class="container">
 
 	<nav class="navigation">
-		<ul>
-			<li [routerLink]="['bulkupload']">Bulk Upload Employee Details</li>
-			<li [routerLink]="['edit']">Create Employee </li>
-
-			<li>
-				<label for="empid">Edit Employee</label>
-
-				<form class="di" (submit)="searchandEdit(empid)">
-					<input id="empid" name="empid" type="" placeholder="give empid and press enter" #empid>
-				</form>
-			</li>
-			<!-- <button class="ph2" (click)="searchandEdit(empid)">go</button></li> -->
-			<li [routerLink]="['empdetails']">All Employees</li>
-
-		</ul>
+		<p-menubar [model]="items">
+			<input type="text" pInputText placeholder="Search Employee by ID">
+			<!-- <button pButton label="Logout" icon="fa-sign-out">Signout</button> -->
+		</p-menubar>
 	</nav>
 
 	<div class="routerOutlet">

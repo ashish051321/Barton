@@ -26,3 +26,12 @@ table{
   table tr:nth-child(even) {
     background-color: lightseagreen;
   }
+
+  .headertextfield{
+    height:32px;
+    width:120px;
+  }
+  
+  .empids{
+    cursor: pointer;
+  }

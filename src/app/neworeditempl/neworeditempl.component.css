@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+@import url('https://fonts.googleapis.com/css?family=PT+Sans');
+
+h2.title{
+    font-family: 'PT Sans', sans-serif;
+    text-align: center;
+    background-color:green;
+    padding:5px 0px 5px 0px;
+    /* font-weight: lighter; */
+}
+div.fullform{
+    font-family: 'Montserrat', sans-serif;
+    width:70%;
+    margin:0 auto;
+    min-height:300px;
+    background-color:lightskyblue;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+
+
+}
+
+.child1,child2{
+    width:270px;
+}
+
+.child1 > div{
+    width:100% !important;
+}

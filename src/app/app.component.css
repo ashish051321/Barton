@@ -8,10 +8,11 @@ div.container{
   justify-content:stretch;
 }
 nav.navigation{
-  padding:10px;
-  margin-bottom: 20px;
+  /* padding:10px; */
+  /* margin-bottom: 20px; */
   flex-grow:0;
 }
+
 div.routerOutlet{
   flex-grow: 1;
   padding:10px;
@@ -24,15 +25,6 @@ div.routerOutlet{
 }
 
 /*  */
-
-nav.navigation > ul > li{
-  cursor:pointer;
-  padding:5px;
-}
-
-nav.navigation > ul > li:hover{
-  background: lightcoral;
-}
 
 input{
   padding:5px;

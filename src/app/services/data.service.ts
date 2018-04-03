@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { AngularFireDatabase } from 'angularfire2/database';
+import "rxjs/add/operator/take";
 
 @Injectable()
 export class DataService {
@@ -26,4 +27,12 @@ export class DataService {
     }
 
   }
+
+
+  getOneEmp(empid){
+    return this.afd.object('/empDB/'+empid).valueChanges().take(1);    
+    //this function will return null if the record for the path specified is not found
+  }
+
+
 }

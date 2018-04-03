@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
@@ -18,7 +19,17 @@ import { AngularFireAuthModule, AngularFireAuth } from 'angularfire2/auth';
 import { EmpdetailsComponent } from './empdetails/empdetails.component';
 
 //service
-import {DataService} from './services/data.service';
+import { DataService } from './services/data.service';
+
+//primeng
+import { MenubarModule } from 'primeng/menubar';
+import { InputTextModule } from 'primeng/inputtext';
+import { MultiSelectModule } from 'primeng/multiselect';
+import { DropdownModule } from 'primeng/dropdown';
+
+
+
+
 
 const firebaseConfig = {
   apiKey: "AIzaSyAGnXoUeYiceWVB7FK83bAta7ufU6BL7uI",
@@ -34,9 +45,14 @@ const firebaseConfig = {
 @NgModule({
   imports: [BrowserModule, FormsModule, AppRoutingModule, AngularFireModule.initializeApp(firebaseConfig),
     AngularFireDatabaseModule,
-    AngularFireAuthModule],
+    AngularFireAuthModule,
+    MenubarModule,
+    InputTextModule,
+    MultiSelectModule,
+    DropdownModule,
+    BrowserAnimationsModule],
   declarations: [AppComponent, HomeComponent, BulkuploadComponent, PagenotfoundComponent, NeworEditEmployeeComponent, EmpdetailsComponent],
-  providers:[DataService],
+  providers: [DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

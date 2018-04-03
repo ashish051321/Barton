@@ -1,7 +1,43 @@
-<p>
-neworeditempl works!
-</p>
+<!-- We will be using ngPrime to develop this page. -->
 
-<p *ngIf="empidFromParent">
-  {{empidFromParent}}
-</p>
+<div class="empDetails">
+
+    <div class="fullform">
+
+        <h2 class="title">Profile Details
+            <span *ngIf="empdata?.empid">: {{empdata.empid}}</span>
+        </h2>
+
+        <div style="display:flex; justify-content:space-around; flex-wrap:wrap;">
+
+            <span class="ui-float-label child1">
+                <input id="float-input" type="text" size="30" pInputText>
+                <label for="float-input">Employee ID</label>
+            </span>
+
+            <span class="ui-float-label child2">
+                <input id="float-input" type="text" size="30" pInputText>
+                <label for="float-input">Full Name</label>
+            </span>
+
+        </div>
+
+        <div style="display:flex; justify-content:space-around; margin-top:25px;">
+
+            <p-dropdown [options]="designations" [(ngModel)]="selectedDesignation" placeholder="Designation" optionLabel="name" [showClear]="true"
+                class="child1" [autoWidth]='false'>
+            </p-dropdown>
+            <!-- <p>Selected City: {{selectedCity ? selectedCity.name : 'none'}}</p> -->
+
+
+            <span class="ui-float-label child2">
+                <input id="float-input" type="text" size="30" pInputText>
+                <label for="float-input">Full Name</label>
+            </span>
+
+        </div>
+
+    </div>
+
+
+</div>
