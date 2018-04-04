@@ -117,8 +117,8 @@ input {
 }
 
 input[type="text"] {
-    height: 32px;
-    font-size: 1.2em;
+    height: 26px;
+    /* font-size: 1.2em; */
     letter-spacing: 2px;
     font-weight: 100;
     border: 1px solid #dcdcdc;
