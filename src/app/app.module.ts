@@ -26,7 +26,11 @@ import { MenubarModule } from 'primeng/menubar';
 import { InputTextModule } from 'primeng/inputtext';
 import { MultiSelectModule } from 'primeng/multiselect';
 import { DropdownModule } from 'primeng/dropdown';
-import {CalendarModule} from 'primeng/calendar';
+import { CalendarModule } from 'primeng/calendar';
+import { ButtonModule } from 'primeng/button';
+import { AddcompetencyComponent } from './neworeditempl/addcompetency/addcompetency.component';
+
+
 
 
 
@@ -44,6 +48,7 @@ const firebaseConfig = {
 
 
 @NgModule({
+
   imports: [BrowserModule, FormsModule, AppRoutingModule, AngularFireModule.initializeApp(firebaseConfig),
     AngularFireDatabaseModule,
     AngularFireAuthModule,
@@ -52,9 +57,20 @@ const firebaseConfig = {
     MultiSelectModule,
     DropdownModule,
     BrowserAnimationsModule,
-    CalendarModule],
-  declarations: [AppComponent, HomeComponent, BulkuploadComponent, PagenotfoundComponent, NeworEditEmployeeComponent, EmpdetailsComponent],
+    CalendarModule,
+    ButtonModule
+  ],
+
+  declarations: [AppComponent,
+    HomeComponent,
+    BulkuploadComponent,
+    PagenotfoundComponent,
+    NeworEditEmployeeComponent,
+    EmpdetailsComponent,
+    AddcompetencyComponent],
+
   providers: [DataService],
+
   bootstrap: [AppComponent]
 })
 export class AppModule { }
