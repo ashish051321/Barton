@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { DataService } from '../services/data.service';
+import { DataService } from '../shared/services/data/data.service';
 import { Dropdown } from 'primeng/components/dropdown/dropdown';
 import { SelectItem } from 'primeng/api';
 
@@ -41,7 +41,7 @@ export class NeworEditEmployeeComponent implements OnInit {
     { label: 'BPS', value: 'BPS' }
   ];
 
- managerList = [
+  managerList = [
     { label: 'Ashish', value: 'Ashish' },
     { label: 'Rashmi', value: 'Rashmi' },
     { label: 'Anup', value: 'Anup' },

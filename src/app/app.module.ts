@@ -9,17 +9,21 @@ import { BulkuploadComponent } from './bulkupload/bulkupload.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 
 import { AppRoutingModule } from './app-routing-module';
+import { EmpdetailsComponent } from './empdetails/empdetails.component';
 import { NeworEditEmployeeComponent } from './neworeditempl/neworeditempl.component';
+
+import { LoginGuardService } from './shared/route-guards/login-guard.service';
 
 import { AngularFireModule } from 'angularfire2';
 
 // New imports to update based on AngularFire2 version 4
-import { AngularFireDatabaseModule, AngularFireDatabase } from 'angularfire2/database';
-import { AngularFireAuthModule, AngularFireAuth } from 'angularfire2/auth';
-import { EmpdetailsComponent } from './empdetails/empdetails.component';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { AngularFireAuthModule } from 'angularfire2/auth';
 
-//service
-import { DataService } from './services/data.service';
+
+//different services in ur application
+import { DataService } from './shared/services/data/data.service';
+import { ComponentCreateService } from './shared/services/component-create/component-create.service';
 
 //primeng
 import { MenubarModule } from 'primeng/menubar';
@@ -28,12 +32,12 @@ import { MultiSelectModule } from 'primeng/multiselect';
 import { DropdownModule } from 'primeng/dropdown';
 import { CalendarModule } from 'primeng/calendar';
 import { ButtonModule } from 'primeng/button';
+
+
 import { AddcompetencyComponent } from './neworeditempl/addcompetency/addcompetency.component';
-
-
-
-
-
+import { AddcertificationComponent } from './shared/components/addcertification/addcertification.component';
+import { LoginComponent } from './login/login.component';
+import { App2Component } from './app2/app2.component';
 
 
 const firebaseConfig = {
@@ -67,10 +71,15 @@ const firebaseConfig = {
     PagenotfoundComponent,
     NeworEditEmployeeComponent,
     EmpdetailsComponent,
-    AddcompetencyComponent],
+    AddcompetencyComponent,
+    AddcertificationComponent,
+    LoginComponent,
+    App2Component],
 
-  providers: [DataService],
+  providers: [DataService, ComponentCreateService, LoginGuardService],
 
-  bootstrap: [AppComponent]
+  entryComponents: [AddcompetencyComponent, AddcertificationComponent],
+
+  bootstrap: [App2Component]
 })
 export class AppModule { }

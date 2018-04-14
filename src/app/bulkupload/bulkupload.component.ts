@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { schema as mySchema } from '../../assets/scripts/excelSchema';
 import { AngularFireDatabase } from 'angularfire2/database';
 import { Router } from '@angular/router';
-import { DataService } from '../services/data.service';
+import { DataService } from '../shared/services/data/data.service';
 
 
 declare var readXlsxFile: any;
@@ -38,7 +38,7 @@ export class BulkuploadComponent implements OnInit {
       // now we have got the excel prased as JSON, ican preprocess it and go ahead with saving into the Firebase database.
       this.preProcessMyJSON();
       // console.log(this.mydata);
-      
+
       this.dataService.setEmpDetails(this.mydata).then(msg => {
         console.log("Data updated successfully");
         setTimeout(() => {
