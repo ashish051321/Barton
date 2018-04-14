@@ -9,20 +9,22 @@ import { EmpdetailsComponent } from './empdetails/empdetails.component';
 import { LoginComponent } from './login/login.component';
 //route guards
 import { LoginGuardService } from './shared/route-guards/login-guard.service';
-
+import { ProfileComponent } from './profile/profile.component';
+import { Profile } from 'selenium-webdriver/firefox';
 
 
 const myroutes = [
   { path: 'login', component: LoginComponent },
   {
-    path: 'authorized', canActivate: [LoginGuardService], children: [
-      { path: 'home', component: HomeComponent },
+    path: 'admin', component: ProfileComponent, canActivate: [LoginGuardService],
+    children: [
       { path: "bulkupload", component: BulkuploadComponent },
       { path: 'edit/:empid', component: NeworEditEmployeeComponent },
       { path: 'edit', component: NeworEditEmployeeComponent },
       { path: 'empdetails', component: EmpdetailsComponent },
     ]
   },
+  { path: 'user', component: ProfileComponent },
   { path: '', redirectTo: '/login', pathMatch: "full" },
   { path: '**', component: PagenotfoundComponent }
 ];

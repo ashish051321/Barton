@@ -14,9 +14,10 @@ div.container {
 button.login {
     border-radius: 10px;
     border-style: none;
-    height: 32px;
+    height: 36px;
     font-family: 'Open Sans', sans-serif;
-    background-color: white;
+    background-color: #d63031;
+    color: white;
 }
 
 button.login:focus {
@@ -26,5 +27,4 @@ button.login:focus {
 button.login:hover {
     cursor: pointer;
     background-color: #d63031;
-    color: white;
 }

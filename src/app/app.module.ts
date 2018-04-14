@@ -24,6 +24,7 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
 //different services in ur application
 import { DataService } from './shared/services/data/data.service';
 import { ComponentCreateService } from './shared/services/component-create/component-create.service';
+import { AuthService } from './shared/services/auth/auth.service';
 
 //primeng
 import { MenubarModule } from 'primeng/menubar';
@@ -38,6 +39,7 @@ import { AddcompetencyComponent } from './neworeditempl/addcompetency/addcompete
 import { AddcertificationComponent } from './shared/components/addcertification/addcertification.component';
 import { LoginComponent } from './login/login.component';
 import { App2Component } from './app2/app2.component';
+import { ProfileComponent } from './profile/profile.component';
 
 
 const firebaseConfig = {
@@ -74,9 +76,10 @@ const firebaseConfig = {
     AddcompetencyComponent,
     AddcertificationComponent,
     LoginComponent,
-    App2Component],
+    App2Component,
+    ProfileComponent],
 
-  providers: [DataService, ComponentCreateService, LoginGuardService],
+  providers: [DataService, ComponentCreateService, LoginGuardService, AuthService],
 
   entryComponents: [AddcompetencyComponent, AddcertificationComponent],
 
