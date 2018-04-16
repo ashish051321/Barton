@@ -19,7 +19,6 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 
-
 //different services in ur application
 import { DataService } from './shared/services/data/data.service';
 import { ComponentCreateService } from './shared/services/component-create/component-create.service';

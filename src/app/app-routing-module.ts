@@ -22,11 +22,17 @@ const myroutes = [
       { path: 'edit/:empid', component: NeworEditEmployeeComponent },
       { path: 'edit', component: NeworEditEmployeeComponent },
       { path: 'empdetails', component: EmpdetailsComponent },
+      {
+        path: 'adminsettings', loadChildren: 'app/admin-settings/admin-settings.module#AdminSettingsModule'
+      },
+      {
+        path: 'appsettings', loadChildren: 'app/app-settings/app-settings.module#AppSettingsModule'
+      }
     ]
   },
   { path: 'user', component: ProfileComponent },
   { path: '', redirectTo: '/login', pathMatch: "full" },
-  { path: '**', component: PagenotfoundComponent }
+  { path: '**', component: PagenotfoundComponent },
 ];
 
 @NgModule({

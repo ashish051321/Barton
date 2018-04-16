@@ -22,11 +22,22 @@ export class ProfileComponent implements OnInit {
 
 
     this.items = [
-      { label: 'Database', routerLink: ['empdetails'] },
-      { label: 'Add Employee', icon: 'fa-plus', routerLink: ['edit'] },
-      { label: 'Manage Metadata' },
-      { label: 'Bulk Upload', routerLink: ['bulkupload'] },
-      { label: 'Logout', command: (evt) => { this.logout(); } }
+      { label: 'All Folks', routerLink: ['empdetails'] },
+      {
+        label: 'New People', icon: 'fa-plus', items: [
+          { label: 'Quick Add', routerLink: ['edit'] },
+          { label: 'Add Detailed', routerLink: ['edit'] },
+          { label: 'Bulk Add', routerLink: ['bulkupload'] },
+        ]
+      },
+      {
+        label: 'Settings', icon: 'fa-gear', items: [
+          { label: 'Admin Settings', routerLink: ['adminsettings'] },
+          { label: 'App Settings', routerLink: ['appsettings'] },
+          { label: 'WorkList', routerLink: [''] }
+        ]
+      },
+      { label: 'Logout', icon: 'fa-sign-out', command: (evt) => { this.logout(); } }
     ];
 
   }
