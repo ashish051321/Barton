@@ -10,3 +10,14 @@ div.container {
     color: white;
     font-family: 'Open Sans', sans-serif;
 }
+
+.title {
+    color: white;
+    letter-spacing: 3px;
+}
+
+.subtitle {
+    color: #333D37;
+    font-weight: bolder;
+    letter-spacing: 3px;
+}

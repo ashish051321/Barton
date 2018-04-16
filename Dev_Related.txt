@@ -1,0 +1,37 @@
+Color Theming:-
+
+white
+grey : #333D37
+yellow: #FCCB0C
+
+reddish button - #D9534F --danger theme
+
+
+======================
+
+Database design:-
+
+1---Where is all the employee data saved.---
+
+All employee profiles saved in empDB:-
+empDB - empid: profileObject}
+
+2-----Who is the admin------
+this will be specified through and object.
+adminList:{emailIDs:[...]}
+
+Whoever is the list, will have admin access.
+
+3----User Access Rules-----
+That is, who all are allowed to signup with the app.
+
+userAccessRules:-
+Specified through an object. Will make it oart of admin module.
+{
+allowAll: <all/allowAllExcept/allowOnly>,
+allowAllExcept:[<email_ids>],
+allowOnly:[<email_ids>]
+}
+
+The logic is simple:-  Whenever a user tries to login, the system will query the userAccessRules and will proceed accordingly.
+
