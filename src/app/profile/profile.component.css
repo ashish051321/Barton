@@ -1,0 +1,47 @@
+p {
+    font-family: Lato;
+}
+
+div.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: stretch;
+}
+
+nav.navigation {
+    /* padding:10px; */
+    /* margin-bottom: 20px; */
+    flex-grow: 0;
+}
+
+div.routerOutlet {
+    flex-grow: 1;
+    padding: 10px;
+    /* flex-basis:70%; */
+    /* margin-top:20px; */
+    border-top: 1px solid black;
+    background: #3F3F3F;
+    color: white;
+    overflow-x: auto;
+}
+
+/*  */
+
+input {
+    padding: 5px;
+    border: 1px solid darkgray;
+}
+
+/* custom logo image to be merged with the PrimeNg menubar */
+
+.ui-menubar ul,
+ul.ui-menubar-root-list {
+    padding-left: 32px !important;
+}
+
+img#logo {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}

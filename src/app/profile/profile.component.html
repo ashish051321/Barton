@@ -1,15 +1,16 @@
 <div class="container">
 
-	<nav class="navigation">
-		<p-menubar [model]="items">
-			<input type="text" pInputText placeholder="Search Employee by ID">
-			<!-- <button pButton label="Logout" icon="fa-sign-out">Signout</button> -->
-		</p-menubar>
-	</nav>
+  <nav class="navigation">
+    <p-menubar [model]="items">
+      <input type="text" pInputText placeholder="Search Employee by ID">
+      <!-- <img id="logo" width="32px" src="../../assets/images/team_small.png" /> -->
 
-	<div class="routerOutlet">
-		<router-outlet></router-outlet>
-	</div>
+    </p-menubar>
+  </nav>
+
+  <div class="routerOutlet">
+    <router-outlet></router-outlet>
+  </div>
 
 
 </div>

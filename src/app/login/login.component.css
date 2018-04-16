@@ -10,21 +10,3 @@ div.container {
     color: white;
     font-family: 'Open Sans', sans-serif;
 }
-
-button.login {
-    border-radius: 10px;
-    border-style: none;
-    height: 36px;
-    font-family: 'Open Sans', sans-serif;
-    background-color: #d63031;
-    color: white;
-}
-
-button.login:focus {
-    outline: none;
-}
-
-button.login:hover {
-    cursor: pointer;
-    background-color: #d63031;
-}

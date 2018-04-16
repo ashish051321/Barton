@@ -3,7 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 
-import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { BulkuploadComponent } from './bulkupload/bulkupload.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
@@ -67,7 +66,7 @@ const firebaseConfig = {
     ButtonModule
   ],
 
-  declarations: [AppComponent,
+  declarations: [
     HomeComponent,
     BulkuploadComponent,
     PagenotfoundComponent,
